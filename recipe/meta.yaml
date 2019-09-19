@@ -10,7 +10,7 @@ source:
   sha256: 849fe52bb57341296ca33fbe6eb60d504e47589af52bf5d176ca64ef8c6a36af
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
@@ -30,6 +30,7 @@ requirements:
     - python >=3.6
     - simplejson
     - storefact
+    - urlquote
     - zstandard
 
 test:
@@ -39,6 +40,7 @@ test:
     - kartothek.io
     - kartothek.io.dask
     - kartothek.serialization
+    - kartothek.core.urlencode
 
 about:
   home: https://github.com/JDASoftwareGroup/kartothek
