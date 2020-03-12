@@ -1,18 +1,18 @@
 {% set name = "kartothek" %}
-{% set version = "3.7.0" %}
+{% set version = "3.8.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fc16893468aac62fda2dd3a1df27ec26189c321803d75227cf0aa488a6759fce
+  sha256: 0e6e598ef44195210582fe7c2a40fa6c5e0fb80913aeeea1ede3c6399cb18058
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
