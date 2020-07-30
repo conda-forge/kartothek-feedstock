@@ -24,8 +24,8 @@ requirements:
     - decorator
     - msgpack-python >=0.5.2
     - numpy !=1.15.0,!=1.16.0
-    - pandas >=0.23.0
-    - pyarrow >=0.11.1, !=0.14.0
+    - pandas >=0.23.0,<1.1
+    - pyarrow >=0.11.1,!=0.14.0,<1
     - python >=3.6
     - simplejson
     - simplekv
