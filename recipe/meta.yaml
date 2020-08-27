@@ -1,5 +1,5 @@
 {% set name = "kartothek" %}
-{% set version = "3.13.1" %}
+{% set version = "3.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d1047f191a7b3e09fadac7a4051962613fd242a7bf64b12b1766aa29923322cd
+  sha256: e7519bcaca6735a8b23a28dcc5fdcb35426ad7139129ed6eaa4e2021897c2fae 
 
 build:
   number: 0
@@ -24,8 +24,8 @@ requirements:
     - decorator
     - msgpack-python >=0.5.2
     - numpy !=1.15.0,!=1.16.0
-    - pandas >=0.23.0,<1.1
-    - pyarrow >=0.11.1,!=0.14.0,<1
+    - pandas >=0.23.0,!=1.0.0
+    - pyarrow >=0.13.0,!=0.14.0,<2
     - python >=3.6
     - simplejson
     - simplekv
