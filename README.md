@@ -5,11 +5,11 @@ Home: https://github.com/JDASoftwareGroup/kartothek
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/kartothek-feedstock/blob/master/LICENSE.txt)
 
 Summary: A consistent table management library in python
 
-
+Documentation: https://kartothek.readthedocs.io/en/latest/
 
 Current build status
 ====================
