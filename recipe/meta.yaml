@@ -25,7 +25,7 @@ requirements:
     - msgpack-python >=0.5.2
     - numpy !=1.15.0,!=1.16.0
     - pandas >=0.23.0,!=1.0.0
-    - pyarrow >=0.17.1,<2
+    - pyarrow >=0.17.1,<3
     - python >=3.6
     - simplejson
     - simplekv
