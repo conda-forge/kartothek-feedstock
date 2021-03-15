@@ -1,5 +1,5 @@
 {% set name = "kartothek" %}
-{% set version = "3.19.1" %}
+{% set version = "3.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58e0900a4652d640cd79f31df81c9fe81ef044253ee29b43d61f9df2f72ac2da
+  sha256: 91bc8e1b7c445cfbf2a1ec69f3e3f030fb88f4953474b483a4cdc4d88231d36a
 
 build:
   number: 0
