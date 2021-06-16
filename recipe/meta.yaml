@@ -1,5 +1,5 @@
 {% set name = "kartothek" %}
-{% set version = "4.0.1" %}
+{% set version = "4.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7d4498a2fc3921a3f7d66efd0f4f9fc62e91972b2b00de58d0566bd0134d9174
+  sha256: 3545c2bc8dcdc92d30b6fb3d8a244251d19a394383198f82b4a67a3464d01cd5
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - setuptools_scm
     - python >=3.6
   run:
-    - dask
+    - dask !=2021.5.1,!=2021.6.0
     - decorator
     - msgpack-python >=0.5.2
     - numpy !=1.15.0,!=1.16.0
