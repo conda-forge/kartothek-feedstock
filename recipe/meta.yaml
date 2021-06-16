@@ -20,7 +20,7 @@ requirements:
     - setuptools_scm
     - python >=3.6
   run:
-    - dask
+    - dask !=2021.5.1,!=2021.6.0
     - decorator
     - msgpack-python >=0.5.2
     - numpy !=1.15.0,!=1.16.0
