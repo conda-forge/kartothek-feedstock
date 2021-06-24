@@ -1,0 +1,36 @@
+From 85e892b42fabb25d24d6b543864d5701f993d293 Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Thu, 24 Jun 2021 11:11:05 +0200
+Subject: [PATCH] Test against pyarrow 4
+
+---
+ .github/workflows/ci.yml | 2 +-
+ requirements.txt         | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 65beddbc..1e0c1d11 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -23,7 +23,7 @@ jobs:
+       matrix:
+         numfocus_nightly: [false]
+         os: ["ubuntu-latest"]
+-        pyarrow: ["0.17.1", "1.0.1", "2.0.0", "3.0.0", "nightly"]
++        pyarrow: ["0.17.1", "1.0.1", "2.0.0", "3.0.0", "4.0.1", "nightly"]
+         python: ["3.6", "3.7", "3.8"]
+         include:
+           - numfocus_nightly: true
+diff --git a/requirements.txt b/requirements.txt
+index 49d397fa..a9c87f8a 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -4,7 +4,7 @@ msgpack>=0.5.2
+ # Currently dask and numpy==1.16.0 clash
+ numpy!=1.15.0,!=1.16.0
+ pandas>=0.23.0, !=1.0.0
+-pyarrow>=0.17.1,!=1.0.0, <4
++pyarrow>=0.17.1,!=1.0.0
+ simplejson
+ simplekv
+ storefact
