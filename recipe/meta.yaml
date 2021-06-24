@@ -8,11 +8,13 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3545c2bc8dcdc92d30b6fb3d8a244251d19a394383198f82b4a67a3464d01cd5
+  patches:
+    - 483.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: '{{ PYTHON }} -m pip install . -vv'
 
 requirements:
   host:
@@ -25,7 +27,7 @@ requirements:
     - msgpack-python >=0.5.2
     - numpy !=1.15.0,!=1.16.0
     - pandas >=0.23.0,!=1.0.0
-    - pyarrow >=0.17.1,!=1.0.0,<4
+    - pyarrow >=0.17.1,!=1.0.0
     - python >=3.6
     - simplejson
     - simplekv
