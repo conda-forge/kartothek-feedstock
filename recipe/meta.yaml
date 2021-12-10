@@ -38,6 +38,7 @@ requirements:
     - click
     - prompt-toolkit
     - pyyaml
+    - deprecation
 
 test:
   requires:
