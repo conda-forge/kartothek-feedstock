@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 13b12562ea9d3aba97dfe8edf3e306e58d00101a6d9c79b1845b1d89d9a3799b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,7 +18,7 @@ requirements:
   host:
     - pip
     - setuptools_scm
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - dask !=2021.5.1,!=2021.6.0
     - decorator
@@ -26,7 +26,7 @@ requirements:
     - numpy !=1.15.0,!=1.16.0
     - pandas >=0.23.0,!=1.0.0
     - pyarrow >=0.17.1,!=1.0.0,<7
-    - python >=3.6
+    - python >={{ python_min }}
     - simplejson
     - simplekv
     - storefact
@@ -43,6 +43,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
